@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - DevBlaze Digital Agency</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+    @media (max-width: 768px) {
+        .contact-hero {
+            min-height: 60vh;
+            padding: 60px 0 30px 0;
+        }
+        .contact-info-cards {
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .footer {
+            padding: 40px 0 20px 0;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo2.png" alt="DevBlaze Logo">
+            </a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Pages</a>
+                <div class="dropdown-menu">
+                    <a href="services.html">Services</a>
+                    <a href="team.html">Team</a>
+                    <a href="projects.html">Projects</a>
+                </div>
+            </div>
+            <a href="contact.html" class="active"><span class="dot"></span>Contact Us</a>
+        </div>
+        <div class="nav-buttons">
+            <a href="contact.html" class="btn-primary">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero contact-hero">
+        <div class="hero-content">
+            <h1>Get In <span class="highlight">Touch</span> With Us</h1>
+            <p>Have a project in mind or want to learn more about our services? We'd love to hear from you. Reach out to us using the contact information below or fill out the form, and our team will get back to you shortly.</p>
+            <div class="contact-info-cards">
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <img src="images/social_icon.svg" alt="Email Icon">
+                    </div>
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:devblaze@gmail.com">devblaze@gmail.com</a></p>   
+                </div>
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <img src="images/social_icon.svg" alt="Phone Icon">
+                    </div>
+                    <h3>Call Us</h3>
+                    <p><a href="tel:+15551234567">+1 (973) 444-8643</a></p>
+                </div>
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <img src="images/social_icon.svg" alt="Location Icon">
+                    </div>
+                    <h3>Visit Us</h3>
+                    <p>123 Digital Avenue, Suite 101, Newark, NJ 07102</p>  
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form" id="contact-form">
+        <div class="container">
+            <div class="section-header">
+                <h2>Send Us a Message</h2>
+                <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+            </div>
+            <div class="form-container">
+                <form id="contactForm" method="POST" action="process_contact.php">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service You're Interested In *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a Service</option>
+                            <option value="Brand Strategy">Brand Strategy & Identity</option>
+                            <option value="Web Development">Website Design & Development</option>
+                            <option value="Digital Marketing">Digital Marketing and SEO</option>
+                            <option value="Content Creation">Content Creation & Copywriting</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </div>
+                    <div id="formStatus" class="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section" id="map">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Location</h2>
+                <p>Visit our office in the heart of New Jersey's tech district.</p>
+            </div>
+            <div class="map-container">
+                <!-- Map placeholder - in a real implementation, this would be replaced with an actual map integration -->
+                <div class="map-placeholder">
+                    <img src="images/project_image_6.webp" alt="Office Location Map">
+                    <div class="map-overlay">
+                        <div class="map-pin">
+                            <img src="images/social_icon.svg" alt="Location Pin">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about working with DevBlaze.</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What information should I prepare before contacting you?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To help us understand your needs better, it's helpful to prepare information about your business, project goals, target audience, timeline, budget range, and any specific requirements or preferences you have. The more details you can provide, the more tailored our response will be.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How quickly will I receive a response after submitting my inquiry?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We typically respond to all inquiries within 24 business hours. For urgent matters, we recommend calling our office directly.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you work with clients outside of New Jersey?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we work with clients globally. While our office is based in New Jersey, we leverage digital communication tools to collaborate effectively with clients anywhere in the world. We've successfully completed projects for clients across North America, Europe, Asia, and Australia.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What happens after I submit my contact form?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>After submitting your contact form, you'll receive an automated confirmation email. Our team will review your inquiry and reach out to schedule an initial consultation to discuss your project in detail. During this consultation, we'll ask questions to better understand your needs, share relevant case studies, and discuss potential approaches to your project.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Digital Presence?</h2>
+                <p>Let's collaborate to create solutions that drive real results for your business.</p>
+                <a href="#contact-form" class="btn-primary">Get Started Now <span class="arrow">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="images/logo2.png" alt="DevBlaze Logo">
+                    <p>Our clients are at the heart of everything we do. At DevBlaze, we pride ourselves on building lasting partnerships through services.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Pages</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="services.html">Brand Strategy</a></li>
+                            <li><a href="services.html">Web Development</a></li>
+                            <li><a href="services.html">Digital Marketing</a></li>
+                            <li><a href="services.html">Content Creation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="mailto:devblaze@gmail.com">devblaze@gmail.com</a></li>
+                            <li><a href="#">+1 (973) 444-8643</a></li>
+                            <li><a href="#">123 Digital Avenue, Suite 101, Newark, NJ 07102</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DevBlaze. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/demilade-adelana-317250364/" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.1-.9-2-2-2s-2 .9-2 2v4.5h-3v-9h3v1.22c.41-.72 1.39-1.22 2.25-1.22 1.66 0 3 1.34 3 3v6z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Discord">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Button and Interface -->
+    <div class="chat-button" aria-label="Open chat">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/><path d="M7 9h10M7 12h7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </div>
+    
+    <div class="chat-container">
+        <div class="chat-header">
+            <h3>DevBlaze Assistant</h3>
+            <button class="chat-close">&times;</button>
+        </div>
+        <div class="chat-messages">
+            <!-- Messages will be added here dynamically -->
+        </div>
+        <div class="chat-input-container">
+            <textarea class="chat-input" placeholder="Type your message..." rows="1"></textarea>
+            <button class="chat-send">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-8 8h6v8h4v-8h6z"/></svg>
+    </a>
+
+    <script src="js/script.js"></script>
+    <script src="js/scroll-animations.js"></script>
+    <script src="js/chat.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formStatus = document.getElementById('formStatus');
+            const submitButton = this.querySelector('button[type="submit"]');
+            
+            // Disable submit button during submission
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+            
+            // Get form data
+            const formData = new FormData(this);
+            
+            // Send form data using fetch
+            fetch('process_contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                let statusHTML = '';
+                if (data.includes('Thank you')) {
+                    statusHTML = `
+                        <div class="status-icon">
+                            <img src="images/verified.png" alt="Success">
+                        </div>
+                        <div class="status-message">Successfully submitted!</div>
+                    `;
+                    formStatus.className = 'form-status success';
+                    this.reset(); // Clear form on success
+                } else {
+                    statusHTML = `
+                        <div class="status-icon">
+                            <img src="images/error.png" alt="Error">
+                        </div>
+                        <div class="status-message">Error occurred. Please try again.</div>
+                    `;
+                    formStatus.className = 'form-status error';
+                }
+                formStatus.innerHTML = statusHTML;
+                formStatus.style.display = 'block';
+            })
+            .catch(error => {
+                const errorHTML = `
+                    <div class="status-icon">
+                        <img src="images/error.png" alt="Error">
+                    </div>
+                    <div class="status-message">Error occurred. Please try again.</div>
+                `;
+                formStatus.innerHTML = errorHTML;
+                formStatus.className = 'form-status error';
+                formStatus.style.display = 'block';
+            })
+            .finally(() => {
+                // Re-enable submit button
+                submitButton.disabled = false;
+                submitButton.textContent = 'Send Message';
+            });
+        });
+    </script>
+</body>
+</html>
